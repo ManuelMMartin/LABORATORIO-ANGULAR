@@ -1,0 +1,12 @@
+<div class="home-content" *ngIf="username; else notAuthenticatedContent">
+  <!-- Contenido para profesores autenticados -->
+  <h2>Bienvenido, {{ username }}</h2>
+  <p>Gracias por utilizar nuestro sistema. utilizando los links de navegacion podras explorar y corregir este laboratorio.</p>
+</div>
+
+<ng-template #notAuthenticatedContent>
+  <!-- Contenido para usuarios no autenticados -->
+  <div class="home-content">
+    <h2>Por favor, inicia sesión para acceder al contenido.</h2>
+  </div>
+</ng-template>

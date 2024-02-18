@@ -1,0 +1,62 @@
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+
+  .selected-photo {
+    margin-bottom: 20px;
+
+    img {
+      max-width: 100%;
+      max-height: 400px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+
+  .photo-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    img {
+      width: 100px;
+      height: auto;
+      cursor: pointer;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: transform 0.2s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .controls {
+    margin-top: 20px;
+
+    button {
+      padding: 10px 20px;
+      margin-right: 10px;
+      font-size: 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #0056b3;
+      }
+
+      &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+    }
+  }
+}

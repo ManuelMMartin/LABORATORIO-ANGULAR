@@ -1,0 +1,26 @@
+<!-- dashboard.component.html -->
+<div class="dashboard-container">
+  <h2>Estado de Entregas por Laboratorio</h2>
+
+  <!-- Tabla de datos -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Ejercicio</th>
+        <th>Estado</th>
+        <th>Fecha de entrega</th>
+        <th>Nota</th>
+        <th>Entregas / Laboratorio</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let entrega of entregas">
+        <td>{{ entrega.ejercicio }}</td>
+        <td>{{ entrega.estado }}</td>
+        <td>{{ entrega.fechaEntrega }}</td>
+        <td>{{ entrega.nota }}</td>
+        <td>{{ entrega.entregas }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
